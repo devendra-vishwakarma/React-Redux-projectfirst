@@ -3,6 +3,7 @@ import React,{ useEffect, useState } from 'react'
 import { add } from '../store/cartSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProduct } from '../store/ProductSlice';
+import { STATUSES } from '../store/ProductSlice';
 function ProductList() {
     const dispatch = useDispatch();
     const { data: Products, status } = useSelector(state => state.product);
@@ -15,6 +16,11 @@ function ProductList() {
         dispatch(add(product));
     };
    console.log("this is array",Products);
+
+    if(status==STATUSES.LOADING){
+        return <h2 style={{display:"flex",alignItems:"center",justifyContent:"center",marginTop:"25rem"}}>Loading...</h2>
+    }
+
     return (
         <div className='productWrap'>
             {Products.map((product, index) => {

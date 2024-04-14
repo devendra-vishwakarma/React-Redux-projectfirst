@@ -17,7 +17,7 @@ function Cart() {
         <div className='cartWrapper'>
             {
              products.map(product=>{ return <>
-               <div>
+               <div key={product.id}>
                 <img src={product.image} alt="" />
                </div>
                <h5>{product.price}</h5>
