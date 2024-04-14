@@ -36,3 +36,40 @@
     transform: rotate(360deg);
   }
 }
+
+.navbar{
+  display: flex;
+  justify-content: space-around;
+  font-size: 2rem;
+}
+.navlink{
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+}
+.productWrap{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  row-gap: 2rem;
+}
+img{
+  height: 80px;
+}
+.card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 400px;
+  width: 400px;
+  border: 1px solid black;
+  box-shadow: 0 0 0 1px blue;
+  /* row-gap: 5rem; */
+}
+.card button{
+  height: 2rem;
+  width: 15rem;
+  background-color: purple;
+}
